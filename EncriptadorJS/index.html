@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Encriptador y desencriptador de mensajes</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+        <script src="script/functions.js"></script>
+    </head>
+
+    <body>
+        <main>
+            <div class="wrapper">
+                <section class="logo">
+                    <h1><img src="imagenes/alura.png" alt="Logo Alura" class="logo-alura"></h1>
+                </section>    
+                
+                <section class="formulario">     
+                    
+                        <textarea id="area-mensaje" class="input-mensaje" placeholder="Ingrese el texto aquí"></textarea>
+                    
+                        <div class="mensaje-advertencia">
+                            <img src="imagenes/simbol_1.png">
+                            <p>Sólo letras minúsculas y sin acentos</p>
+                        </div>
+                        <div class="botones">
+                            <button class="boton-encriptar" onclick="iniciarProceso(0)">Encriptar</button>
+                            <button class="boton-desencriptar" onclick="iniciarProceso(1)">Desencriptar</button>
+                        </div>
+                                                
+                </section>
+                
+                <section class="flotante">                
+                    <div class="mensaje-sin-descubrir" id="sin-mensaje">
+                        <img src="imagenes/not_exist.png" alt="No encontrado" class="imagen-no-encontrado">
+                        <h4>Ningún mensaje fue encontrado</h4>
+                        <p>Ingresa el texto que desees encriptar o desencriptar</p>                    
+                    </div>
+                    
+                    <div class="mensaje-descubierto" id="con-mensaje">
+                        <div class="mostrar-mensaje">
+                            <p id="mensaje-final">Mensaje descubierto</p>
+                        </div>
+                        <div class="copiar">
+                            <button class="boton-copiar" onclick="copiarMensaje()">Copiar</button>
+                        </div>
+                    </div>
+                    
+                </section>                
+            </div>    
+        </main>
+        <footer>
+        	<div>            
+            	<p>Elaborado por Alberto S</p>
+            </div>
+        </footer>
+    </body>
+</html>
